@@ -1,0 +1,10 @@
+{
+  "name": "East Sweden Hack",
+  "description": "Project for East Seden Hack",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "4.x",
+    "ejs": "~1.0.0"
+  }
+}
