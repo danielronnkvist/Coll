@@ -6,21 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>test</title>
 
+  <!-- LESS -->
+  <link rel="stylesheet/less" href="css/style.less">
+  <!-- set options before less.js script -->
+  <script>
+    less = {
+      env: "development",
+      async: false,
+      fileAsync: false,
+      poll: 1000,
+      functions: {},
+      dumpLineNumbers: "comments",
+      relativeUrls: false,
+      rootpath: ":/a.com/"
+    };
+  </script>
+  <script src="js/less-1.7.0.min.js"></script>
+
+  <!-- GMaps -->
+  <script src="js/gmaps-api.js"></script>
+  <script src="js/gmaps.js"></script>
+
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-  <script src="/js/startpage.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Touchswipe -->
+  <script src="js/jquery.touchSwipe.min.js"></script>
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script> -->
 </head>
 <body ng-controller="startController">
   <header>
-  hej
+
   </header>
-  <main>
+
+  <main id="currentScreen">
 
   </main>
+
+  <div id="main-1" style="display:none;">
+    <div class="container">
+      <div id="timelineHolder"></div>
+    </div>
+  </div>
+  <div id="main-2" style="display:none;">
+    <div class="container">
+      <h1>Map</h1>
+      <div class="row-fluid">
+        <div id="mapHolder"></div>
+      </div>
+      <div class="row-fluid">
+        <img id="image"></img>
+      </div>
+    </div>
+  </div>
+  <div id="main-3" style="display:none;">
+    <h1>MAIN 3 yao!!!</h1>
+  </div>
   <footer>
     <!-- Kanske inget här eller -->
   </footer>
+  <script type="text/javascript" src="js/timeline.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/screens.js"></script>
 </body>
 </html>
