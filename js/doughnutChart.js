@@ -5,10 +5,11 @@ var pieData = [
 		label: 'green points',
 		labelColor: "#F38630", 
 		labelFontSize : '16'
+		strokeColor: "rgba(220,220,220,0.8)",
 	},
 	{
 		value: 17, 
-		color: "#FFFFFF"
+		color: "RED"
 	}
 ];
 var pieOptions = {

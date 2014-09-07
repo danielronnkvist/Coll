@@ -11,7 +11,7 @@ var green = '#99BD47',
 
 current = "dayView"
 
-target.html(dayView.html());
+target.html(main3.html());
 ind1.css('background-color', green)
 target.swipe( {fingers: 'all', swipeRight: rightSwipe, swipeLeft: leftSwipe, allowPageScroll:'auto'} );
 
