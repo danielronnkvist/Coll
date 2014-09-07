@@ -48,40 +48,50 @@ for(var i = trips.length-1; i >= 0; i--)
   {
     if(trips[i+1].start - trips[i].end > 0.2)
     {
-      html += makeCircle();
+      html += '<div class="end"></div>';
     }
   }
-  html += htmlGenerator(height, trips[i].classification, trips[i].affect, paus);
+  html += htmlGenerator(height, trips[i]);
   if(trips[i-1])
   {
     if(trips[i].start - trips[i-1].end > 0.2)
     {
-      html += makeCircle();
+      html += '<div class="end"></div>';
     }
   }
 
   document.getElementById('timelineHolder').innerHTML += html;
 }
 
-function htmlGenerator(height, classification, affect, paus)
+function htmlGenerator(height, trip)
 {
-  var dia = affect * timelineConstant * 3;
-  var circle = makeCircle(classification, dia)
+  var dia = 48 + trip.affect * timelineConstant *3;
+  if(dia > height)
+    dia = height-5;
+  var circle = makeCircle(trip, dia)
   return '<div class="timeline-element classification-'+
-               classification+'" style="height:'+height+'px;">'+circle+'</div>';
+               trip.classification+'" style="height:'+height+'px;">'+circle+'</div>';
 }
 
-function makeCircle(classification, dia)
+function makeCircle(trip, dia)
 {
-  if(classification)
-    return '<div class="circle affect classification-'+classification+'" style="width:'+dia+'px;height:'+dia+'px;"></div>'
-  else
+  if(trip.classification)
   {
     odd = !odd;
+    var html = "";
     if(odd)
-      return '<div class="circle marker end"></div>'
+    {
+      html += '<label class="time time-top">'+trip.end+'</label>'
+      html +='<div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;margin-left:-'+(dia-3)+'px;"></div>';
+      html += '<label class="time time-bottom">'+trip.start+'</label>'
+    }
     else
-      return '<div class="circle marker"></div>'
+    {
+      html += '<label class="time time-top time-left">'+trip.end+'</label>'
+      html +='<div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;"></div>';
+      html += '<label class="time time-bottom time-left">'+trip.start+'</label>'
+    }
+    return html
   }
 
 }
