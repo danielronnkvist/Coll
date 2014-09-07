@@ -11,12 +11,8 @@ var green = '#99BD47',
 
 current = "dayView"
 
-<<<<<<< HEAD
-target.html(main3.html());
-=======
 target.html(dayView.html());
 drawDoughnut();
->>>>>>> 89f88256e418a30dfdc26d616c2661cca72ffc3e
 ind1.css('background-color', green)
 target.swipe( {fingers: 'all', swipeRight: rightSwipe, swipeLeft: leftSwipe, allowPageScroll:'auto'} );
 
@@ -43,7 +39,7 @@ function rightSwipe(){
       }, 200, function(){
         target.html(main2.html())
         target.css("margin-left", "0");
-        // ADD FUNCTION HERE
+        drawDoughnut2();
         ind3.css('background-color', white)
         ind2.css('background-color', green)
       })
@@ -66,6 +62,7 @@ function leftSwipe(){
         target.css("margin-left", "0");
         ind1.css('background-color', white)
         ind2.css('background-color', green)
+        drawDoughnut2()
       })
       current = "main2"
     break;
