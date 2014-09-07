@@ -1,43 +1,4 @@
-var trips = [
-  {
-    "type": "car",
-    "classification": 3,
-    "start": 0,
-    "end": 1.3,
-    "affect": 0.1
-  },{
-    "type": "walk",
-    "classification": 1,
-    "start": 1.8,
-    "end": 2.2,
-    "affect": 0.04
-  },{
-    "type": "car",
-    "classification": 3,
-    "start": 2.2,
-    "end": 4,
-    "affect": 0.16
-  },{
-    "type": "bus",
-    "classification": 2,
-    "start": 5.3,
-    "end": 5.8,
-    "affect": 0.04
-  },{
-    "type": "car",
-    "classification": 3,
-    "start": 9,
-    "end": 10,
-    "affect": 0.25
-  },{
-    "type": "walk",
-    "classification": 1,
-    "start": 10,
-    "end": 12,
-    "affect": 0.04
-  },
-];
-var timelineConstant = 100;
+var timelineConstant = 150;
 var odd = false;
 for(var i = trips.length-1; i >= 0; i--)
 {
@@ -68,6 +29,8 @@ function htmlGenerator(height, trip)
   var dia = 48 + trip.affect * timelineConstant *3;
   if(dia > height)
     dia = height-5;
+  if(dia > ($(window).width()/2))
+    dia = ($(window).width()/2) - 5
   var circle = makeCircle(trip, dia)
   return '<div class="timeline-element classification-'+
                trip.classification+'" style="height:'+height+'px;">'+circle+'</div>';
@@ -79,16 +42,18 @@ function makeCircle(trip, dia)
   {
     odd = !odd;
     var html = "";
+    var info = '<img src="img/'+trip.type+'.svg" style="fill:white;width:70%;margin-left:'+((0.3*dia)/2)+'px;margin-top:'+((0.3*dia)/5)+'px;width:'+(0.7*dia)+';margin-bottom:-10px;">'
+    info += '<p class="text-center circle-text">10km</p>'
     if(odd)
     {
       html += '<label class="time time-top">'+trip.end+'</label>'
-      html +='<div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;margin-left:-'+(dia-3)+'px;"></div>';
+      html +='<div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;margin-left:-'+(dia-3)+'px;">'+info+'</div>';
       html += '<label class="time time-bottom">'+trip.start+'</label>'
     }
     else
     {
       html += '<label class="time time-top time-left">'+trip.end+'</label>'
-      html +='<div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;"></div>';
+      html +='<div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;">'+info+'</div>';
       html += '<label class="time time-bottom time-left">'+trip.start+'</label>'
     }
     return html
