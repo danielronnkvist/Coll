@@ -12,7 +12,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- LESS -->
-  <link rel="stylesheet/less" href="http://localhost:3000/style.less">
+  <link rel="stylesheet/less" href="css/style.less">
 
   <!-- set options before less.js script -->
   <script>
@@ -40,18 +40,21 @@
   <!-- Touchswipe -->
   <script src="js/jquery.touchSwipe.min.js"></script>
 
+  <!-- Trips variable -->
+  <script src="js/variable.js"></script>
+
   <!-- Chartjs -->
   <script src="js/Chart.js"></script>
+  <script src="js/ChartNew.js"></script>
 
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script> -->
 </head>
 <body ng-controller="startController">
   <header>
     <div class="container">
       <div class="row-fluid ">
-        <div class="col-xs-3">!</div>
+        <div class="col-xs-3"><img src="img/Uttrop.svg" alt="" class="header-img"></div>
         <div class="col-xs-6 text-center"><h3 style="margin-top:2px;">COLL</h3></div>
-        <div class="col-xs-3">¤</div>
+        <div class="col-xs-3"><img src="img/Profile.svg" alt="" class="header-img pull-right"></div>
       </div>
       <div class="row-fluid ">
         <div class="line top-mark"></div>
@@ -70,10 +73,13 @@
 
   <div id="main-1" style="display:none;">
     <div class="container">
-      <div class="row">
+      <div class="row graph-info">
         <div class="col-xs-8 col-xs-offset-2 text-center">
           <h2>TIS 13 aug</h2>
-          <div id="graph"></div>
+          <div id="graph">
+            <h1 class="amount-percentage">83%</h1>
+            <canvas id="myChart" width="160" height="160"></canvas>
+          </div>
           <p>av ditt mål är förbrukat</p>
         </div>
       </div>
@@ -83,22 +89,76 @@
     </div>
   </div>
   <div id="main-2" style="display:none;">
-    <div class="container">
-
-    </div>
+  <canvas id="barChart" width="300" height="400"></canvas>
+  <h1> Lite ikoner här kanske </h1>
+  <canvas id="myChart2" width="160" height="160"></canvas>
   </div>
   <div id="main-3" style="display:none;">
-    <h1> 83 %</h1>
-    <canvas id="myChart" width="300" height="400">
-      
-    </canvas>
+    <div class="container">
+      <div class="row text-center bov-info bottom-divider">
+        <div class="col-xs-12">
+          <h4>DINA STÖRSTA MILJÖBOVAR</h4>
+          <img src="img/Criminal.svg" alt="">
+          <h5>Det här är de sträckor du har störst möjlighet att förbättra ditt avtryck på miljön</h5>
+        </div>
+      </div>
+      <div class="row">
+        <table class="table">
+          <tr class="">
+            <td><img src="" alt=""></td>
+            <td>
+              <div class="container">
+                <div class="row"><strong>Hem - Jobbet</strong></div>
+                <div class="row">
+                  <div class="affect-bar"></div>
+                </div>
+                <div class="row travel-times">14ggr i aug</div>
+              </div>
+            </td>
+            <td>
+              <div class="cotainer">
+                <div class="row">
+                  <div class="travels">
+                    <img src="img/Bus.svg" class="travel-icons">
+                    <img src="img/Bike.svg" class="travel-icons">
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="">
+            <td><img src="" alt=""></td>
+            <td>
+              <div class="container">
+                <div class="row"><strong>Norrköping 2 km</strong></div>
+                <div class="row">
+                  <div class="affect-bar"></div>
+                </div>
+                <div class="row travel-times">10ggr i aug</div>
+              </div>
+            </td>
+            <td>
+              <div class="cotainer">
+                <div class="row">
+                  <div class="travels">
+                    <img src="img/Bus.svg" class="travel-icons">
+                    <img src="img/Bike.svg" class="travel-icons">
+                    <img src="img/Walking.svg" class="travel-icons">
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
   <footer>
     <!-- Kanske inget här eller -->
   </footer>
   <script type="text/javascript" src="js/timeline.js"></script>
   <script src="js/map.js"></script>
-  <script src="js/screens.js"></script>
   <script src="js/doughnutChart.js"></script>
+  <script src="js/screens.js"></script>
 </body>
 </html>

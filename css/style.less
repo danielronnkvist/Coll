@@ -1,4 +1,4 @@
-@background: #BAD5D4;
+@background: #F6F6F6;
 @red: #C20E1A;
 @green: #99BD47;
 @yellow: #F7EA3A;
@@ -10,6 +10,7 @@ html, body
   color: @black;
   font-family: 'Muli', sans-serif;
   font-weight: 300;
+  padding-bottom: 30px;
 }
 #indicator
 {
@@ -53,33 +54,42 @@ html, body
 }
 .time
 {
-  color: white;
+  color: @black;
   margin-left: 12px;
   text-align: left;
 }
 .time-left
 {
-  margin-left: -25px !important;
-  text-align: right !important;
+  margin-left: -25px;
+  text-align: right;
 }
 .time-bottom
 {
   position: absolute;
   bottom: 0;
 }
-.time-top:nth-child(odd)
-{
-  /*margin-left: -25px !important;*/
-}
 .classification-1{background-color:@green;}
 .classification-2{background-color:@yellow;}
 .classification-3{background-color:@red;}
-
+.graph-info
+{
+  margin-bottom: 30px;
+}
 .circle
 {
   border-radius: 100%;
   margin: 0 auto;
   margin-top: -20px;
+}
+.circle-text
+{
+  margin-top: -5px;
+}
+.amount-percentage
+{
+  margin-top: 60px;
+  position: absolute;
+  margin-left: 60px;
 }
 .affect
 {
@@ -122,6 +132,11 @@ header
   background-color: @background;
   height: 40px;
 }
+.header-img
+{
+   height: auto;
+   width: 20px;
+}
 .top-mark
 {
   border-top: solid;
@@ -135,4 +150,43 @@ header
   width: 100%;
   position: absolute;
   margin-top: 29px;
+}
+.bov-info>div>h4
+{
+  color: @black;
+}
+.bottom-divider
+{
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(255,255,255,0.8);
+}
+.suggest-table
+{
+  width: 95%;
+}
+.suggest-table>tr
+{
+  width: 100%;
+}
+.affect-bar
+{
+  height: 15px;
+  width: 40px;
+  background-color: @red;
+  margin-left: 1px;
+}
+.travel-icons
+{
+  max-width: 30px;
+  max-height: 25px;
+  float: right;
+}
+.travels
+{
+  margin-right: 20px;
+}
+.travel-times
+{
+  color: @black;
 }
