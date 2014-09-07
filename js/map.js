@@ -23,3 +23,5 @@ function createMap(){
     strokeWeight: 6
   });
 }
+
+createMap()
