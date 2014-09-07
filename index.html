@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>test</title>
+  <title>Coll</title>
 
   <!-- LESS -->
-  <link rel="stylesheet/less" href="css/style.less">
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- set options before less.js script -->
   <script>
     less = {
@@ -35,6 +36,9 @@
 
   <!-- Touchswipe -->
   <script src="js/jquery.touchSwipe.min.js"></script>
+
+  <!-- Chartjs -->
+  <script src="js/Chart.js"></script>
 
   <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script> -->
 </head>
@@ -64,7 +68,10 @@
     </div>
   </div>
   <div id="main-3" style="display:none;">
-    <h1>MAIN 3 yao!!!</h1>
+    <h1> 83 %</h1>
+    <canvas id="myChart" width="300" height="400">
+      
+    </canvas>
   </div>
   <footer>
     <!-- Kanske inget här eller -->
@@ -72,5 +79,6 @@
   <script type="text/javascript" src="js/timeline.js"></script>
   <script src="js/map.js"></script>
   <script src="js/screens.js"></script>
+  <script src="js/doughnutChart.js"></script>
 </body>
 </html>
