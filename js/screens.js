@@ -11,8 +11,12 @@ var green = '#99BD47',
 
 current = "dayView"
 
+<<<<<<< HEAD
+target.html(main3.html());
+=======
 target.html(dayView.html());
 drawDoughnut();
+>>>>>>> 89f88256e418a30dfdc26d616c2661cca72ffc3e
 ind1.css('background-color', green)
 target.swipe( {fingers: 'all', swipeRight: rightSwipe, swipeLeft: leftSwipe, allowPageScroll:'auto'} );
 
