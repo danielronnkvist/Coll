@@ -1,4 +1,4 @@
-function setColor(area,data,config,i,j,animPct,value) 
+function setColor(area,data,config,i,j,animPct,value)
 {
 	if(area=="FILLCOLOR")
 	{
@@ -11,13 +11,13 @@ function setColor(area,data,config,i,j,animPct,value)
 
 }
 
-function drawDoughnut()
+function drawBarchart()
 {
 	var barData = {
         labels: ["M", "T", "O", "T", "F", "L", "S"],
           datasets: [
             {
-                labelColor: "RED", 
+                labelColor: "RED",
                 fillColor: setColor,
                 strokeColor: "WHITE",
                 highlightFill: "rgba(220,220,220,0.75)",

@@ -40,6 +40,7 @@ function rightSwipe(){
         target.html(main2.html())
         target.css("margin-left", "0");
         drawDoughnut2();
+        drawBarchart()
         ind3.css('background-color', white)
         ind2.css('background-color', green)
       })
@@ -63,6 +64,7 @@ function leftSwipe(){
         ind1.css('background-color', white)
         ind2.css('background-color', green)
         drawDoughnut2()
+        drawBarchart()
       })
       current = "main2"
     break;
