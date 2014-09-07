@@ -2,22 +2,24 @@ path = [[-12.044012922866312, -77.02470665341184], [-12.05449279282314, -77.0302
 path2 = [[58.392589, 15.557079], [58.394175, 15.560362], [58.395052, 15.564439]]
 path3 = [[58.392589, 15.557079], [58.395052, 15.564439]]
 
-map = new GMaps({
-  div: '#mapHolder',
-  lat: 58.393796,
-  lng: 15.561152,
-  scrollwheel: false
-});
+function createMap(){
+  map = new GMaps({
+    div: '#mapHolder',
+    lat: 58.393796,
+    lng: 15.561152,
+    scrollwheel: false
+  });
 
-map.drawPolyline({
-  path: path3,
-  strokeColor: '#131540',
-  strokeOpacity: 0.6,
-  strokeWeight: 6
-});
-map.drawPolyline({
-  path: path2,
-  strokeColor: 'red',
-  strokeOpacity: 0.6,
-  strokeWeight: 6
-});
+  map.drawPolyline({
+    path: path3,
+    strokeColor: '#131540',
+    strokeOpacity: 0.6,
+    strokeWeight: 6
+  });
+  map.drawPolyline({
+    path: path2,
+    strokeColor: 'red',
+    strokeOpacity: 0.6,
+    strokeWeight: 6
+  });
+}
