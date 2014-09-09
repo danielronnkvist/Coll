@@ -1,4 +1,4 @@
-var timelineConstant = 150;
+var timelineConstant = 350;
 var odd = false;
 for(var i = trips.length-1; i >= 0; i--)
 {
@@ -42,18 +42,18 @@ function makeCircle(trip, dia)
   {
     odd = !odd;
     var html = "";
-    var info = '<img src="img/'+trip.type+'-white.svg" style="fill:white;width:70%;margin-left:'+((0.3*dia)/2)+'px;margin-top:'+((0.3*dia)/5)+'px;width:'+(0.7*dia)+';margin-bottom:-10px;">'
+    var info = '<img src="img/'+trip.type+'-white.png" style="fill:white;width:70%;margin-left:'+((0.3*dia)/2)+'px;margin-top:'+((0.3*dia)/5)+'px;width:'+(0.7*dia)+';margin-bottom:-10px;">'
     info += '<p class="text-center circle-text">10km</p>'
     if(odd)
     {
       html += '<label class="time time-top">'+trip.end+'</label>'
-      html +='<a href="http://localhost/ESH/presentation.html"><div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;margin-left:-'+(dia-3)+'px;">'+info+'</div></a>';
+      html +='<a href="http://dtyd.se/presentation.html"><div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;margin-left:-'+(dia-3)+'px;">'+info+'</div></a>';
       html += '<label class="time time-bottom">'+trip.start+'</label>'
     }
     else
     {
       html += '<label class="time time-top time-left">'+trip.end+'</label>'
-      html +='<a href="http://localhost/ESH/presentation.html"><div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;">'+info+'</div></a>';
+      html +='<a href="http://dtyd.se/presentation.html"><div class="circle affect classification-'+trip.classification+'" style="width:'+dia+'px;height:'+dia+'px;">'+info+'</div></a>';
       html += '<label class="time time-bottom time-left">'+trip.start+'</label>'
     }
     return html

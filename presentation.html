@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="appen">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>test</title>
+  <title>Coll</title>
 
   <!-- Font -->
   <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
@@ -41,16 +41,19 @@
   <script src="js/jquery.touchSwipe.min.js"></script>
 
 </head>
-<body ng-controller="startController">
+<body>
   <header>
     <div class="container">
       <div class="row-fluid ">
-        <div class="col-xs-3"><img src="img/Uttrop-grey.svg" alt="" class="header-img"></div>
+        <div class="col-xs-3"><img src="img/Uttrop-grey.png" Annotation class="header-img"></div>
         <div class="col-xs-6 text-center"><h3 style="margin-top:2px;">COLL</h3></div>
-        <div class="col-xs-3"><img src="img/Profile-grey.svg" alt="" class="header-img pull-right"></div>
+        <div class="col-xs-3"><img src="img/Profile-grey.png" Annotation class="header-img pull-right"></div>
       </div>
       <div class="line top-mark"></div>
     </div>
+  </header>
+
+  <main id="currentScreen">
     <div class="container trip-info">
       <div class="row text-center">
         <strong>7 AUGUSTI 2014</strong>
@@ -58,11 +61,8 @@
       <div class="row text-center">
         12.04 - 12.21
       </div>
-        <a href="http://localhost/ESH/"><img src="img/next.svg" alt="" class="back"></a>
+        <a href="/"><img src="img/next.png" Annotation class="back"></a>
     </div>
-  </header>
-
-  <main id="currentScreen">
     <div class="container">
       <div class="row-fluid">
         <div id="mapHolder"></div>
@@ -74,13 +74,13 @@
               <div class="container">
                 <div class="row">
                   <div class="col-xs-3">
-                    <img id="arrow-past" src="img/next.svg" alt="" class="img-responsive turn-around">
+                    <img id="arrow-past" src="img/next.png" Annotation class="img-responsive turn-around">
                   </div>
                   <div class="col-xs-6 text-center">
                     <h5 id="alt-text">ALTERNATIV 1</h5>
                   </div>
                   <div class="col-xs-3 pull-right">
-                    <img id="arrow-next" src="img/next.svg" alt="" class="img-responsive">
+                    <img id="arrow-next" src="img/next.png" Annotation class="img-responsive">
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@
                     </div>
                   </div>
                   <div class="col-xs-8 col-xs-offset-2 center-presentation">
-                    <img src="img/Bike-green.svg" alt="" class="img-responsive presentation-transport">
+                    <img src="img/bike-green.png" Annotation class="img-responsive presentation-transport">
                     <h4>CYKLING</h4>
                   </div>
                   <div class="row">
@@ -132,7 +132,7 @@
                     </div>
                   </div>
                   <div class="col-xs-8 col-xs-offset-2 center-presentation">
-                    <img src="img/Bus-yellow.svg" alt="" class="img-responsive presentation-transport">
+                    <img src="img/bus-yellow.png" Annotation class="img-responsive presentation-transport">
                     <h4>BUSS</h4>
                   </div>
                   <div class="row">
@@ -154,13 +154,89 @@
               <div id="bus-timetable" class="container">
                 <div class="row">
                   <div class="col-xs-12 text-center">
-                    <h4>VISA BUSSTABELL</h4>
+                    <h4>FLER FÖRSLAG</h4>
+                    <img src="img/next.png" Annotation class="img-responsive table-next">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-6 col-xs-offset-3 text-center">
-                    <img src="img/next.svg" alt="" class="img-responsive table-down">
                   </div>
+                </div>
+                <div class="row">
+                  <table class="table">
+                    <tr>
+                      <td>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-xs-4">
+                              19 min
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12">
+                              Teknikringen - Linköpings resecentrum
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4">
+                              <strong>12.01</strong>
+                            </div>
+                            <div class="col-xs-8 pull-right">
+                              <strong>12.20</strong>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-xs-4">
+                              19 min
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12">
+                              Teknikringen - Linköpings resecentrum
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4">
+                              <strong>11.46</strong>
+                            </div>
+                            <div class="col-xs-8 pull-right">
+                              <strong>12.05</strong>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-xs-4">
+                              19 min
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-12">
+                              Teknikringen - Linköpings resecentrum
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-xs-4">
+                              <strong>12.16</strong>
+                            </div>
+                            <div class="col-xs-8 pull-right">
+                              <strong>12.35</strong>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </td>

@@ -1,39 +1,39 @@
 var trips = [
   {
-    "type": "Car",
+    "type": "car",
     "classification": 3,
-    "start": 0,
-    "end": 1.3,
+    "start": 08.00,
+    "end": 09.30,
     "affect": 0.1
   },{
     "type": "Walking",
     "classification": 1,
-    "start": 1.8,
-    "end": 2.2,
-    "affect": 0.04
+    "start": 09.45,
+    "end": 10.00,
+    "affect": 0.004
   },{
-    "type": "Car",
+    "type": "car",
     "classification": 3,
-    "start": 2.2,
-    "end": 4,
+    "start": 10.00,
+    "end": 11.00,
     "affect": 0.16
   },{
     "type": "Bus",
     "classification": 2,
-    "start": 5.3,
-    "end": 5.8,
+    "start": 12.01,
+    "end": 12.20,
     "affect": 0.04
   },{
-    "type": "Car",
+    "type": "car",
     "classification": 3,
-    "start": 9,
-    "end": 10,
+    "start": 14.00,
+    "end": 14.30,
     "affect": 0.25
   },{
     "type": "Walking",
     "classification": 1,
-    "start": 10,
-    "end": 12,
-    "affect": 0.04
+    "start": 14.30,
+    "end": 14.50,
+    "affect": 0.004
   },
 ];
