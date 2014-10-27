@@ -6,7 +6,7 @@ var trips = [
     "end": 09.30,
     "affect": 0.1
   },{
-    "type": "Walking",
+    "type": "walking",
     "classification": 1,
     "start": 09.45,
     "end": 10.00,
@@ -18,7 +18,7 @@ var trips = [
     "end": 11.00,
     "affect": 0.16
   },{
-    "type": "Bus",
+    "type": "bus",
     "classification": 2,
     "start": 12.01,
     "end": 12.20,
@@ -30,7 +30,7 @@ var trips = [
     "end": 14.30,
     "affect": 0.25
   },{
-    "type": "Walking",
+    "type": "walking",
     "classification": 1,
     "start": 14.30,
     "end": 14.50,
