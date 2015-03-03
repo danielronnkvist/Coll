@@ -1,5 +1,4 @@
-COLL
-=======
+![alt text](./img/coll.png "Logo Title Text 1")
 
 Detta är en mockup för att visa på hur appen Coll ska se ut och fungera.
 
